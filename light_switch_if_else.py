@@ -27,20 +27,27 @@ class LightSwitchInterface(ABC):
     @abstractmethod
     def fix(self):
         pass
-
-class LightSwitch(LightSwitchInterface, object):
-    def __init__(self, state: str):
-        self.state = state
-
-    @override
-    def turn_on(self):
-        pass
-
-    @override
-    def turn_off(self):
-        pass
-
-    @override
-    def fix(self):
-        pass
+#
+# class LightSwitch(LightSwitchInterface, object):
+#     def __init__(self, state: str):
+#         self.state = state
+#
+#     @override
+#     def turn_on(self):
+#         if self.state == "on":
+#             print('do nothing')
+#         elif self.state == "off":
+#             self.state = "on"
+#         elif self.state == "borken":
+#             print('broken.')
+#         else:
+#             raise NotImplementedError()
+#
+#     @override
+#     def turn_off(self):
+#         pass
+#
+#     @override
+#     def fix(self):
+#         pass
 
