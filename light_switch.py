@@ -15,7 +15,6 @@
 from abc import ABC, abstractmethod
 from typing import override
 
-
 class LightSwitchInterface(ABC):
     @abstractmethod
     def turn_on(self):
