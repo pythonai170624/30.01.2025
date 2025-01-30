@@ -13,6 +13,8 @@
 #     turn-off: nothing happens
 #     fix: light switch is on again
 from abc import ABC, abstractmethod
+from typing import override
+
 
 class LightSwitchInterface(ABC):
     @abstractmethod
@@ -27,16 +29,19 @@ class LightSwitchInterface(ABC):
     def fix(self):
         pass
 
-class LightSwitch(object, LightSwitchInterface):
+class LightSwitch(LightSwitchInterface, object):
     def __init__(self, state: str):
         self.state = state
 
+    @override
     def turn_on(self):
         pass
 
+    @override
     def turn_off(self):
         pass
 
+    @override
     def fix(self):
         pass
 
